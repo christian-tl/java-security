@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<style>
+.main{
+   margin : 100px auto;
+   border : 1px solid #333; 
+   width : 1000px;
+}
+</style>
+</head>
+<div class="main">
+<form>
+<input type="text" id="j_username"/>
+<input type="password" id="j_password"/>
+<input type="button" id="j_button" value="login"/>
+</form>        
+</div>
+<script type="text/javascript">
+$(function(){
+	$('#j_button').click(function(){
+		var username = $('#j_username').val();
+		var password = $('#j_password').val();
+                alert(btoa(password));
+             	$.ajax({
+		    url : "http://10.66.141.235:8080/dataservice/api/sys/mobile/errata/advisory/kerberos",
+		    dataType : "jsonp",
+                    type : "POST",
+                    data : {j_username : username , j_password : btoa(password)},
+		    success : function(data){
+		       alert(data.code);
+                    }
+		});
+	});
+});
+</script>
+</html>
