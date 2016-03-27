@@ -1,4 +1,4 @@
-package com.redhat.devops.security.pki.certificate;
+package com.redhat.devops.security.pki.signature;
 
 import java.security.KeyFactory;
 import java.security.KeyPair;
@@ -61,11 +61,11 @@ class RSACoder{
 	 * NONEwithRSA
 	 * MD2EwithRSA
 	 * MD5EwithRSA
-	 * SHA1EwithRSA
+	 * SHA1withRSA
 	 * SHA224withRSA
-	 * SHA256EwithRSA
-	 * SHA384EwithRSA
-	 * SHA512EwithRSA
+	 * SHA256withRSA
+	 * SHA384withRSA
+	 * SHA512withRSA
 	 */
 	private static final String SIGNATURE_ALGORITHM = "MD5withRSA";
 	

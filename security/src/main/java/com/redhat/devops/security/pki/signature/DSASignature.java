@@ -1,4 +1,4 @@
-package com.redhat.devops.security.pki.certificate;
+package com.redhat.devops.security.pki.signature;
 
 import static org.junit.Assert.assertTrue;
 
